@@ -1,0 +1,23 @@
+{
+  "name": "rick-n-morty-api",
+  "version": "1.0.0",
+  "description": "Assestment case for Blossom ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinGH13/rick-n-morty-api.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "GraphQL"
+  ],
+  "author": "KevinGH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevinGH13/rick-n-morty-api/issues"
+  },
+  "homepage": "https://github.com/KevinGH13/rick-n-morty-api#readme"
+}
