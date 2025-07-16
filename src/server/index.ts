@@ -1,5 +1,7 @@
 import express, { Application } from "express";
-import { createHandler } from "graphql-http";
+import { graphqlHTTP } from "express-graphql";
+import { CharacterSchema } from "../graphql/schemas/characterSchema";
+import CharacterResolver from "../graphql/resolvers/characterResolver";
 
 export class Server {
   private app: Application;
@@ -23,7 +25,11 @@ export class Server {
       res.json({ status: "Server is running", timestamp: new Date().toISOString() });
     });
 
-    this.app.all("/graphql", createHandler({}));
+    this.app.use("/graphql", graphqlHTTP({
+      schema: CharacterSchema,
+      rootValue: CharacterResolver,
+      graphiql: true
+    }));
 
     this.app.listen(this.PORT, () => {
       console.log(`Server is running on http://localhost:${this.PORT}`);

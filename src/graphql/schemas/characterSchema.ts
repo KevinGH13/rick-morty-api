@@ -1,6 +1,6 @@
 import { buildSchema } from "graphql";
 
-const Schema = buildSchema(`
+export const CharacterSchema = buildSchema(`
   type Character {
     id: String!
     name: String!
@@ -39,6 +39,7 @@ const Schema = buildSchema(`
   
   type Query {
     characters(page: Int, name: String): [Character]
+    characterss: [Character]
     character(id: ID!): Character
   } 
   
